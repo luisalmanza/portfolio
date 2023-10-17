@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Christmas Matches",
+        "description": "A players manager where you can create random matches with your friends and family.",
+        "img": "./assets/images/christmas-matches.jpg",
+        "repository": "https://github.com/luisalmanza/christmas-matches",
+        "skills": [
+            "Angular",
+            "TypeScript",
+            "HTML",
+            "SCSS",
+            "Bootstrap",
+            "Jest",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "Swagger"
+        ]
+    },
+    {
+        "name": "Sessions Controller",
+        "description": "A basic login project where you can manage sessions and access permissions.",
+        "img": "./assets/images/sessions-controller.jpg",
+        "repository": "https://github.com/luisalmanza/sessions-controller",
+        "skills": [
+            "Angular",
+            "TypeScript",
+            "HTML",
+            "SCSS",
+            "Bootstrap",
+            "Node.js",
+            "MongoDB",
+            "Express"
+        ]
+    },
+    {
+        "name": "Portfolio",
+        "description": "This is my portfolio web page.",
+        "img": "./assets/images/portfolio.jpg",
+        "repository": "https://github.com/luisalmanza/portfolio",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap"
+        ]
+    },
+    {
+        "name": "Invito Digital",
+        "description": "This is my own business that offers interactive digital invitation creation services for any type of event.",
+        "img": "./assets/images/invito-digital.jpg",
+        "repository": "https://invitodigital.com/",
+        "skills": [
+            "Angular",
+            "TypeScript",
+            "HTML",
+            "SCSS",
+            "Bootstrap",
+            "MySQL",
+            "PHP"
+        ]
+    }
+]

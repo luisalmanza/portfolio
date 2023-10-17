@@ -1,0 +1,64 @@
+[
+    {
+        "entity": "IT Step Academy",
+        "title": "College Professor",
+        "description": "JavaScript programming teacher.",
+        "period": "Jul 2023 - Present",
+        "skills": [
+            "JavaScript",
+            "jQuery",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "entity": "3Pillar Global",
+        "title": "Senior Software Engineer",
+        "description": "Support and frontend development for web apps and UI testing.",
+        "period": "May 2022 - Present",
+        "skills": [
+            "Angular",
+            "TypeScript",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "WebdriverIO",
+            "Azure DevOps"
+        ]
+    },
+    {
+        "entity": "Samsung",
+        "title": "Software Engineer",
+        "description": "Support and frontend development for web apps and technical interviews application for candidates.",
+        "period": "Sep 2017 - May 2022",
+        "skills": [
+            "AngularJS",
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Git",
+            "JIRA"
+        ]
+    },
+    {
+        "entity": "LKMX",
+        "title": "QA Engineer",
+        "description": "Manual testing for web/mobile apps and tests documentation.",
+        "period": "May 2017 - Sep 2017",
+        "skills": [
+            "JIRA",
+            "Manual testing"
+        ]
+    },
+    {
+        "entity": "Universidad Xochicalco",
+        "title": "Computer Assistant",
+        "description": "Technical support and corrective/preventive maintenance for computer equipment.",
+        "period": "Sep 2015 - Feb 2017",
+        "skills": [
+            "Technical Support",
+            "Network installations"
+        ]
+    }
+]
