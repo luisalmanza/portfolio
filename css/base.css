@@ -23,3 +23,9 @@ body {
 *:focus {
     box-shadow: none !important;
 }
+
+@media (max-width: 640px) {
+    html {
+        font-size: 10px;
+    }
+}

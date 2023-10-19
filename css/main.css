@@ -77,7 +77,6 @@ i {
 
 #skills {
     display: flex;
-    padding: 0 50px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -118,13 +117,27 @@ footer .subtitle {
 }
 
 .toggle:checked {
-    height: 30px;
-    width: 70px !important;
     background-color: var(--accent-color-shade);
     border: 1px solid white;
 }
 
-@media (max-width: 991px) {
+.aux-nav {
+    position: absolute;
+    margin-top: -50px;
+}
+
+.hello {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* RESPONSIVE (1050 PX) */
+
+@media (max-width: 1050px) {
+    section {
+        padding: 50px 10% 0px;
+    }
+
     a:hover {
         border-bottom: none;
     }
@@ -132,5 +145,67 @@ footer .subtitle {
     .picture {
         width: 150px;
         height: 150px;
+    }
+
+    .img-footer {
+        width: 100%;
+    }
+
+    .toggle {
+        height: 20px;
+        width: 50px !important;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about,
+    .img-container {
+        width: 80%;
+    }
+
+    .img-container {
+        align-items: center;
+    }
+
+    .hello {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+/* RESPONSIVE (991 PX) */
+
+@media (max-width: 991px) {
+    a:hover {
+        border-bottom: none;
+    }
+
+    .aux-nav {
+        margin-top: -150px;
+    }
+}
+
+/* RESPONSIVE (640 PX) */
+
+@media (max-width: 640px) {
+    .about,
+    .img-container {
+        width: 90%;
+    }
+
+    .about label {
+        margin: 0 7px 15px;
+        padding: 5px 15px;
+    }
+
+    .aux-nav {
+        margin-top: -100px;
+    }
+
+    #experience .card {
+        width: 100% !important;
     }
 }

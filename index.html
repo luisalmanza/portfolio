@@ -19,19 +19,18 @@
 
 <body>
     <!-- HEADER -->
-    <header>
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-lg p-0" data-bs-theme="dark">
             <div class="container-fluid p-3">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <div class="navbar-nav w-100 justify-content-center">
-                        <a class="nav-link active" href="#">ABOUT ME</a>
-                        <a class="nav-link" href="#">EXPERIENCE</a>
-                        <a class="nav-link" href="#">PROJECTS</a>
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link active" href="#" data-target="about">ABOUT ME</a>
+                        <a class="nav-link" href="#experience-nav" data-target="experience-nav">EXPERIENCE</a>
+                        <a class="nav-link" href="#projects-nav" data-target="projects-nav">PROJECTS</a>
                     </div>
                 </div>
             </div>
@@ -39,8 +38,8 @@
     </header>
 
     <!-- ABOUT ME -->
-    <section class="d-flex">
-        <div class="img-container d-flex d-flex flex-column">
+    <section class="d-flex" id="about">
+        <div class="img-container d-flex flex-column">
             <img src="./assets/images/profile.jpg" class="rounded-circle picture" alt="">
             <h2 class="mt-4 fs-3 img-footer">Luis Almanza</h2>
             <h2 class="fs-6 subtitle img-footer">Senior Frontend Engineer</h2>
@@ -50,11 +49,10 @@
             <div class="form-check form-switch img-footer d-flex justify-content-center mt-2">
                 <input class="form-check-input toggle" type="checkbox" role="switch" id="dark-mode" onclick="changeVisibilityMode()" checked>
             </div>
-            
         </div>
 
         <div class="about">
-            <h2 class="mb-5 text-center subtitle">Hello world!</h2>
+            <h2 class="subtitle hello">Hello world!</h2>
             <p>
                 My name is Luis Almanza and I am a computer engineer specialized in frontend development, however I also
                 have basis on backend side.
@@ -74,12 +72,14 @@
     </section>
 
     <!-- EXPERIENCE -->
+    <div id="experience-nav" class="aux-nav"></div>
     <section>
         <h2 class="subtitle text-center mb-5">Experience</h2>
         <div id="experience" class="d-flex gap-5 flex-wrap justify-content-center"></div>
     </section>
 
     <!-- PROJECTS -->
+    <div id="projects-nav" class="aux-nav"></div>
     <section>
         <h2 class="subtitle text-center mb-5">Projects</h2>
         <div id="projects" class="d-flex gap-5 flex-wrap justify-content-center"></div>

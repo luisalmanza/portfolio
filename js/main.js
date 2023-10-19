@@ -1,5 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
+    /* MENU */
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            links.forEach(l => {
+                l.classList.remove("active");
+            });
+
+            link.classList.add("active");
+
+            if (document.body.offsetWidth < 992) {
+                document.getElementById("hamburger").click();
+            }
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+        let menu = ["about", "experience-nav", "projects-nav"];
+
+        for (let option of menu) {
+            if (isInViewport(document.getElementById(option))) {
+                currentSection = option;
+                break;
+            }
+        }
+
+        links.forEach(link => {
+            link.classList.remove("active");
+        });
+
+        if (currentSection) {
+            const activeLink = document.querySelector(`[data-target="${currentSection}"]`);
+            activeLink.classList.add("active");
+        }
+    });
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
     /* SKILLS */
     fetch('./data/skills.json').then(response => response.json()).then(skills => {
         const skillsElement = document.getElementById("skills");
@@ -67,11 +115,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+
+});
+
 function changeVisibilityMode() {
     const root = document.querySelector(":root");
 
     const darkMode = document.getElementById("dark-mode").checked;
-    if(darkMode) {
+    if (darkMode) {
         root.style.setProperty("--background-color", "#011C32");
         root.style.setProperty("--neutral-color", "#e0e0e0");
         root.style.setProperty("--accent-color", "#05D939");
