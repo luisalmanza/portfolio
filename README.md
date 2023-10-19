@@ -4,4 +4,4 @@ This is my current portfolio where I show some of my projects and work experienc
 
 ## Technologies
 
-HTML, CSS, JavaScript and Bootstrap
+HTML, CSS, JavaScript and Bootstrap.
