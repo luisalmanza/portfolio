@@ -115,10 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-
-});
-
 function changeVisibilityMode() {
     const root = document.querySelector(":root");
 
