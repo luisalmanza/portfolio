@@ -1,7 +1,7 @@
 # Portfolio
 
-This is my current portfolio
+This is my current portfolio where I show some of my projects and work experience.
 
 ## Technologies
 
-Pending...
+HTML, CSS, JavaScript and Bootstrap
