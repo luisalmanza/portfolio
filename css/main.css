@@ -240,6 +240,10 @@ blockquote iframe {
 
 @media (max-width: 640px) {
 
+    .modal-dialog {
+        max-width: 348px !important;
+    }
+
     .about,
     .img-container {
         width: 90%;

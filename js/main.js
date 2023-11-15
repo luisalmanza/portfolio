@@ -145,6 +145,10 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             `;
         });
+
+        const script = document.createElement("script");
+        script.src = "https://www.tiktok.com/embed.js";
+        document.head.appendChild(script);
     });
 });
 
