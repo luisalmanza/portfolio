@@ -227,7 +227,7 @@ blockquote iframe {
     }
 
     .aux-nav {
-        margin-top: -150px;
+        margin-top: -180px;
     }
 
     #story iframe {
@@ -248,10 +248,6 @@ blockquote iframe {
     .about .tag {
         margin: 0 7px 15px;
         padding: 5px 15px;
-    }
-
-    .aux-nav {
-        margin-top: -100px;
     }
 
     #experience .card {

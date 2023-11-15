@@ -18,23 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("scroll", () => {
-        let currentSection = "";
-        let menu = ["about", "experience-nav", "projects-nav", "mystory-nav", "content-nav"];
+        if (document.body.offsetWidth >= 992) {
+            let currentSection = "";
+            let menu = ["about", "experience-nav", "projects-nav", "mystory-nav", "content-nav"];
 
-        for (let option of menu) {
-            if (isInViewport(document.getElementById(option))) {
-                currentSection = option;
-                break;
+            for (let option of menu) {
+                if (isInViewport(document.getElementById(option))) {
+                    currentSection = option;
+                    break;
+                }
             }
-        }
 
-        links.forEach(link => {
-            link.classList.remove("active");
-        });
+            links.forEach(link => {
+                link.classList.remove("active");
+            });
 
-        if (currentSection) {
-            const activeLink = document.querySelector(`[data-target="${currentSection}"]`);
-            activeLink.classList.add("active");
+            if (currentSection) {
+                const activeLink = document.querySelector(`[data-target="${currentSection}"]`);
+                activeLink.classList.add("active");
+            }
         }
     });
 
