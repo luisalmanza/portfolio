@@ -15,6 +15,7 @@
     <title>Luis Almanza | Frontend Developer</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,8 @@
                         <a class="nav-link active" href="#" data-target="about">ABOUT ME</a>
                         <a class="nav-link" href="#experience-nav" data-target="experience-nav">EXPERIENCE</a>
                         <a class="nav-link" href="#projects-nav" data-target="projects-nav">PROJECTS</a>
+                        <a class="nav-link" href="#mystory-nav" data-target="mystory-nav">MY STORY</a>
+                        <a class="nav-link" href="#content-nav" data-target="content-nav">DIGITAL CONTENT</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +50,8 @@
                 <i class="bi bi-circle-half fs-5 dark me-3"></i><span>Dark mode</span>
             </div>
             <div class="form-check form-switch img-footer d-flex justify-content-center mt-2">
-                <input class="form-check-input toggle" type="checkbox" role="switch" id="dark-mode" onclick="changeVisibilityMode()" checked>
+                <input class="form-check-input toggle" type="checkbox" role="switch" id="dark-mode"
+                    onclick="changeVisibilityMode()" checked>
             </div>
         </div>
 
@@ -85,15 +89,50 @@
         <div id="projects" class="d-flex gap-5 flex-wrap justify-content-center"></div>
     </section>
 
+    <!-- STORY -->
+    <div id="mystory-nav" class="aux-nav"></div>
+    <section class="d-flex flex-column align-items-center" id="story">
+        <h2 class="subtitle text-center mb-5">My Story</h2>
+        <iframe src="https://www.youtube.com/embed/Yv2rZbBkObg" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- DIGITAL CONTENT -->
+    <div id="content-nav" class="aux-nav"></div>
+    <section>
+        <h2 class="subtitle text-center mb-5">Some of my Digital Content</h2>
+
+        <div class="collage">
+            <div class="line">
+                <div class="bg" style="background-image: url('../assets/images/video1.png')" data-bs-toggle="modal" data-bs-target="#video1"></div>
+                <div class="bg" style="background-image: url('../assets/images/video2.png')" data-bs-toggle="modal" data-bs-target="#video2"></div>
+                <div class="bg" style="background-image: url('../assets/images/video3.png')" data-bs-toggle="modal" data-bs-target="#video3"></div>
+                <div class="bg" style="background-image: url('../assets/images/video4.png')" data-bs-toggle="modal" data-bs-target="#video4"></div>
+            </div>
+
+            <div class="line">
+                <div class="bg" style="background-image: url('../assets/images/video5.png')" data-bs-toggle="modal" data-bs-target="#video5"></div>
+                <div class="bg" style="background-image: url('../assets/images/video6.png')" data-bs-toggle="modal" data-bs-target="#video6"></div>
+                <div class="bg" style="background-image: url('../assets/images/video7.png')" data-bs-toggle="modal" data-bs-target="#video7"></div>
+                <div class="bg" style="background-image: url('../assets/images/video8.png')" data-bs-toggle="modal" data-bs-target="#video8"></div>
+            </div>
+        </div>
+
+        <div id="videos"></div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <h2 class="subtitle ">Luis Almanza</h2>
 
         <nav class="d-flex gap-3">
-            <a href="mailto:almanza.la@outlook.com" rel="nofollow" target="_blank"><i class="bi bi-envelope" title="Email"></i></a>
-            <a href="https://www.linkedin.com/in/almanzaluis/" rel="nofollow" target="_blank"><i class="bi bi-linkedin" title="LinkedIn"></i></a>
-            <a href="https://github.com/luisalmanza" rel="nofollow" target="_blank"><i class="bi bi-github" title="GitHub"></i></a>
-            <a href="https://www.instagram.com/luisanhello/" rel="nofollow" target="_blank"><i class="bi bi-instagram" title="Instagram"></i></a>
+            <a href="mailto:almanza.la@outlook.com" rel="nofollow" target="_blank"><i class="bi bi-envelope"
+                    title="Email"></i></a>
+            <a href="https://www.linkedin.com/in/almanzaluis/" rel="nofollow" target="_blank"><i class="bi bi-linkedin"
+                    title="LinkedIn"></i></a>
+            <a href="https://github.com/luisalmanza" rel="nofollow" target="_blank"><i class="bi bi-github"
+                    title="GitHub"></i></a>
+            <a href="https://www.instagram.com/luisanhello/" rel="nofollow" target="_blank"><i class="bi bi-instagram"
+                    title="Instagram"></i></a>
         </nav>
     </footer>
 

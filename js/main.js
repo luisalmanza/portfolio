@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
         let currentSection = "";
-        let menu = ["about", "experience-nav", "projects-nav"];
+        let menu = ["about", "experience-nav", "projects-nav", "mystory-nav", "content-nav"];
 
         for (let option of menu) {
             if (isInViewport(document.getElementById(option))) {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const skillsElement = document.getElementById("skills");
 
         skills.forEach(skill => {
-            skillsElement.innerHTML += `<label>${skill}</label>`;
+            skillsElement.innerHTML += `<span class="tag">${skill}</span>`;
         });
     });
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const skillSize = experience[i].skills.length;
 
             for (let j = 0; j < skillSize; j++) {
-                skillsElement.innerHTML += `<label>${experience[i].skills[j]}</label>`;
+                skillsElement.innerHTML += `<span class="tag">${experience[i].skills[j]}</span>`;
             }
         }
     });
@@ -109,14 +109,46 @@ document.addEventListener("DOMContentLoaded", () => {
                 const skillSize = projects[i].skills.length;
 
                 for (let j = 0; j < skillSize; j++) {
-                    skillsElement.innerHTML += `<label>${projects[i].skills[j]}</label>`;
+                    skillsElement.innerHTML += `<span class="tag">${projects[i].skills[j]}</span>`;
                 }
             }
         });
+
+    /* DIGITAL CONTENT  */
+    fetch('./data/videos.json').then(response => response.json()).then(videos => {
+        const videosElement = document.getElementById("videos");
+
+        videos.forEach(video => {
+            videosElement.innerHTML += `
+            <div class="modal fade" id="${video.name}">
+                <div class="modal-dialog modal-dialog-centered" style="max-width: 350px; margin:auto">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5"> <a href="https://tiktok.com/@luisanhello" rel="nofollow"
+                                    target="_blank">@luisanhello</a></h1>
+                            <a target="_blank" class="btn btn-primary ms-auto" href="https://tiktok.com/@luisanhello" rel="nofollow">Ver perfil</a>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <blockquote class="tiktok-embed"
+                                cite="https://www.tiktok.com/@luisanhello/video/${video.id}"
+                                data-video-id="${video.id}">
+                                <section> <a target="_blank" title="@luisanhello"
+                                        href="https://www.tiktok.com/@luisanhello?refer=embed">@luisanhello</a></section>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    });
 });
 
 function changeVisibilityMode() {
     const root = document.querySelector(":root");
+    let closeButtons = document.getElementsByClassName("btn-close");
 
     const darkMode = document.getElementById("dark-mode").checked;
     if (darkMode) {
@@ -125,11 +157,20 @@ function changeVisibilityMode() {
         root.style.setProperty("--accent-color", "#05D939");
         root.style.setProperty("--header-color", "#01223D");
         root.style.setProperty("--label-color", "#05D939");
+        root.style.setProperty("--modal-color", "#212529");
+        Array.from(closeButtons).forEach(btn => {
+            btn.classList.add("btn-close-white");
+        });
     } else {
         root.style.setProperty("--background-color", "#f2f2f2");
         root.style.setProperty("--neutral-color", "#333333");
         root.style.setProperty("--accent-color", "#025834");
         root.style.setProperty("--header-color", "#025834");
         root.style.setProperty("--label-color", "white");
+        root.style.setProperty("--modal-color", "#ffffff");
+
+        Array.from(closeButtons).forEach(btn => {
+            btn.classList.remove("btn-close-white");
+        });
     }
 }

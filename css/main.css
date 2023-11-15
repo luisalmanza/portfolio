@@ -28,12 +28,13 @@ header a:hover {
     width: 40%;
 }
 
-.subtitle {
+.subtitle,
+.modal-title a {
     color: var(--accent-color);
     font-family: var(--mono-font);
 }
 
-label {
+.tag {
     display: flex;
     align-items: center;
     color: var(--label-color);
@@ -45,7 +46,7 @@ label {
     margin: 5px;
 }
 
-.about label {
+.about .tag {
     margin: 0 15px 25px;
     padding: 10px 30px;
 }
@@ -131,11 +132,53 @@ footer .subtitle {
     margin-bottom: 40px;
 }
 
+#story iframe {
+    width: 560px;
+    height: 315px;
+}
+
+blockquote {
+    width: 323px !important;
+    height: 568px;
+    margin: 0 !important;
+}
+
+blockquote iframe {
+    margin-top: -6px;
+}
+
+.modal-content {
+    background-color: var(--modal-color);
+}
+
+.modal-title a {
+    text-decoration: none;
+}
+
+.collage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+}
+
+.bg {
+    width: 25%;
+    padding-top: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
 /* RESPONSIVE (1050 PX) */
 
 @media (max-width: 1050px) {
     section {
-        padding: 50px 10% 0px;
+        padding: 50px 5% 0px;
     }
 
     a:hover {
@@ -186,17 +229,23 @@ footer .subtitle {
     .aux-nav {
         margin-top: -150px;
     }
+
+    #story iframe {
+        width: 80%;
+        height: 230px;
+    }
 }
 
 /* RESPONSIVE (640 PX) */
 
 @media (max-width: 640px) {
+
     .about,
     .img-container {
         width: 90%;
     }
 
-    .about label {
+    .about .tag {
         margin: 0 7px 15px;
         padding: 5px 15px;
     }
@@ -207,5 +256,33 @@ footer .subtitle {
 
     #experience .card {
         width: 100% !important;
+    }
+
+    #story iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .collage {
+        flex-direction: row;
+    }
+
+    .line {
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .bg {
+        width: 100%;
+        padding-top: 100%;
+    }
+}
+
+@media (max-width: 405px) {
+
+    blockquote,
+    blockquote iframe {
+        width: 100% !important;
+        /*height: auto;*/
     }
 }
