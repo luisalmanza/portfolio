@@ -1,21 +1,9 @@
 [
     {
-        "entity": "IT Step Academy",
-        "title": "College Professor",
-        "description": "JavaScript programming professor.",
-        "period": "Jul 2023 - Present",
-        "skills": [
-            "JavaScript",
-            "jQuery",
-            "HTML",
-            "CSS"
-        ]
-    },
-    {
         "entity": "3Pillar Global",
         "title": "Senior Software Engineer",
         "description": "Support and frontend development for web apps and UI testing.",
-        "period": "May 2022 - Present",
+        "period": "May 2022 - Dec 2023",
         "skills": [
             "Angular",
             "TypeScript",
